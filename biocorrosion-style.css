@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f3a4d;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    position: relative;
+    transition: 0.5s;
+    left: 0;
+}
+
+.wrapper.active {
+    left: -400px;
+}
+
+header {
+    background: #12222d;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    z-index: 10000;
+    transition: 0.5s;
+}
+
+header.sticky {
+    padding: 20px 100px;
+    background: #162c3b;
+}
+
+header .logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    content: 'CIC';
+    color: #fff !important;
+    width: 300px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .logo:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+    content: 'Corporación para la Investigación de la Corrosión';
+    color: #fff !important;
+}
+
+header .toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+header .toggle::before {
+    content: 'Menu';
+    margin-right: 10px;
+}
+
+header .toggle.activate::before {
+    content: 'Close';
+}
+
+header .toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+
+header .toggle span::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header .toggle span::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header .toggle.activate span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+
+header .toggle.activate span::after {
+    transform: rotate(135deg);
+    top: 24px;
+}
+
+.sidebar {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #12222d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.sidebar.active {
+    right: 0px;
+}
+
+.sidebar ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.sidebar ul li a:hover {
+    color: #3f8ffc;
+    font-size: 35px;
+}
+
+section {
+    margin-top: 2em;
+}
+
+.servicios-bio {
+    width: 100%;
+    margin-left: 2em;
+    color: #eba119;
+    font-size: 2em;
+}
+
+.card-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em;
+    padding: 2em;
+    top: 5em;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 100%;
+    gap: 0.75em;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    margin: 1em;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: width 0.5s ease-in-out;
+}
+
+.card:hover {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: calc(100% - 300px);
+    height: 100%;
+    padding: 2em;
+    background-color: #fff;
+    transition: left 0.5s ease-in-out;
+}
+
+.card:hover .card-info {
+    left: 300px;
+}
+
+.card-info h3,
+.card-info p {
+    margin: 0;
+}
+
+.card-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-info p {
+    font-size: 1em;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #111;
+}

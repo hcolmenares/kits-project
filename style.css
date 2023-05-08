@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+    height: 1000px;
+}
+
+.wrapper {
+    position: relative;
+    transition: 0.5s;
+    left: 0;
+}
+
+.wrapper.active {
+    left: -400px;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    transition: 0.5s;
+}
+
+header.sticky {
+    padding: 0;
+    background: #162c3b;
+}
+
+header .logo {
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .logoImg
+{
+    scale: 0.4;
+    height: 100%;
+    width: 150px;
+    object-fit: cover;
+}
+
+header .toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    padding: 1px 20px;
+}
+
+header .toggle::before {
+    content: 'Menu';
+    margin-right: 10px;
+}
+
+header .toggle.activate::before {
+    content: 'Close';
+}
+
+header .toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+
+header .toggle span::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header .toggle span::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header .toggle.activate span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+
+header .toggle.activate span::after {
+    transform: rotate(135deg);
+    top: 24px;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #3475ca;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner img {
+    display: none;
+}
+
+.banner img.active {
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner:hover img {
+    opacity: 0.25;
+}
+
+.banner .content {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.banner:hover .content {
+    opacity: 1;
+    position: relative;
+    max-width: 950px;
+    text-align: center;
+}
+
+.banner .content h2 {
+    font-size: 60px;
+    color: #fff;
+}
+
+.banner .content p {
+    color: #fff;
+}
+
+.kits {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #3475ca;
+    width: 100%;
+    height: 20vh;
+}
+
+.kits-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    display: flex;
+}
+
+.kits-section .kits-title
+{
+    width: 100%;
+}
+
+.kits-section .contentBx {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 60px;
+    width: 100%;
+}
+
+.kits-section .contentBx .heading {
+    width: 100%;
+}
+
+.kits-section .contentBx .kits-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kits-section .imgBx {
+    position: relative;
+    width: 50%;
+}
+
+.kits-section .contentBx .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.kits-section .contentBx .imgBx img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kits-section .contentBx .content h2 {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.kits-section .contentBx p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: #12222d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.sidebar.active {
+    right: 0px;
+}
+
+.sidebar ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.sidebar ul li a:hover {
+    color: #3f8ffc;
+    font-size: 35px;
+}
+
+section {
+    margin-top: 2em;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    display: flex;
+}
+
+.about .contentBx {
+    background: #fff;
+    padding: 60px;
+    width: 50%;
+}
+
+.heading {
+    position: relative;
+    color: #162c3b;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: justify;
+    position: relative;
+    color: #162c3b;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.about .imgBx {
+    position: relative;
+    width: 50%;
+    background: url(img/window.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.services {
+    position: relative;
+    background: #fff;
+    text-align: center;
+    padding: 100px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.container .servicesBx {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    z-index: 1000;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+    margin-bottom: 0.75em;
+}
+
+.container .servicesBx:hover {
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    background: #162c3b;
+    color: #fff;
+    transition-delay: 0s;
+    border-radius: 20px;
+    scale: 1.01;
+}
+
+.container .servicesBx:hover::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+    z-index: -3;
+}
+
+.container .servicesBx:hover::before {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+    z-index: -2;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+        width: 600px;
+        height: 600px;
+    }
+
+    to {
+        transform: rotate(360deg);
+        width: 600px;
+        height: 600px;
+    }
+}
+
+.container .servicesBx img {
+    max-width: 100px;
+}
+
+.container .servicesBx h2 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.team {
+    position: relative;
+    padding: 0 50px 50px;
+    text-align: center;
+}
+
+.team .container {
+    margin-top: 30px;
+}
+
+.team .teamBx {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.team .teamBx:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.team .teamBx .box {
+    margin: 0 10px;
+    width: 260px;
+    padding: 5px;
+    background: #fff;
+}
+
+.team .teamBx .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.team .teamBx .box .imgBx img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team .teamBx .box .content {
+    padding: 15px 0;
+}
+
+.team .teamBx .box .content h2 {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.team .teamBx .box .content h2 span {
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.contact {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.information {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.information .imgBx2 {
+    position: relative;
+    width: 50%;
+    background: url(img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.redBg {
+    background: url(img/red.jpg) !important;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form .inputBx {
+    margin-bottom: 40px;
+}
+
+.form .inputBx input {
+    width: 80%;
+    margin-left: 1.5em;
+    margin-top: 0.75em;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx input::placeholder,
+.form .inputBx textarea::placeholder {
+    color: #fff;
+}
+
+.form .inputBx textarea {
+    width: 80%;
+    margin-left: 1.5em;
+    margin-top: 0.75em;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 200px;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputBx input[type="submit"] {
+    width: 150px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.footer {
+    position: relative;
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .text {
+    color: #fff;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer ul li a img {
+    max-width: 20px;
+    filter: invert(1);
+}
+
+@media (max-width: 991px) {
+
+    header,
+    header.sticky {
+        padding: 20px 50px;
+    }
+
+    .sidebar ul li a {
+        font-size: 24px;
+    }
+
+    .banner {
+        padding: 50px;
+    }
+
+    .banner .content h2 {
+        font-size: 36px;
+    }
+
+    .banner .content p {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentBx {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .about .imgBx {
+        min-height: 400px;
+        width: 100%;
+    }
+
+    .services {
+        padding: 50px;
+    }
+
+    .container {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .container .servicesBx {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+    }
+
+    .technology {
+        padding: 50px;
+        padding-top: 300px;
+        margin-top: -300px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .technology .imgBx {
+        margin-top: 40px;
+    }
+
+    .client {
+        padding: 50px;
+    }
+
+    .client .imgBx {
+        justify-content: center;
+    }
+
+    .testimonial {
+        padding: 50px;
+    }
+
+    .testimonial .container {
+        margin: 0;
+    }
+
+    .testimonial .container .contentBx {
+        padding: 40px 30px;
+    }
+
+    .team {
+        padding: 0 50px 50px;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+
+    .footer {
+        padding: 20px 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+
+    .footer ul {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.prev-slide,
+.next-slide {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50%;
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(51, 51, 51, 0.75);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.prev-slide:hover,
+.next-slide:hover {
+    opacity: 1;
+}
+
+.prev-slide {
+    margin-right: 1rem;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    background-color: rgba(51, 51, 51, 0.75);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #111;
+}
