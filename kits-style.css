@@ -20,10 +20,6 @@ body {
     transition: 0.5s;
 }
 
-.wrapper.active {
-    left: -400px;
-}
-
 header {
     background: #12222d;
     position: fixed;
@@ -53,8 +49,7 @@ header .logo {
     letter-spacing: 1px;
 }
 
-header .logoImg
-{
+header .logoImg {
     scale: 0.4;
     height: 100%;
     width: 150px;
@@ -242,8 +237,7 @@ section {
     transition: left 0.5s ease-in-out;
 }
 
-.card-botton
-{
+.card-botton {
     border: none;
     background-color: #003764;
     text-align: center;
@@ -282,4 +276,97 @@ a:visited,
 a:active {
     text-decoration: none;
     color: #fff;
+}
+
+@media (max-width: 375px) {
+
+    .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    header,
+    header.sticky {
+        padding: 0px 10px;
+    }
+
+    header .logo {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        position: relative;
+        left: -20px;
+    }
+
+    header .logoImg {
+        position: relative;
+        width: 120px;
+        font-size: 10px;
+        left: -15px;
+    }
+
+    header .toggle {
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .card-section {
+        margin: 0.5em;
+        padding: 1em;
+        top: 5em;
+    }
+
+    .servicios-bio {
+        margin-left: 0;
+        font-size: 1.75em;
+        text-align: center;
+    }
+
+    .card-list {
+        gap: 0.35em;
+    }
+
+    .card {
+        justify-content: center;
+        margin: 0.75em;
+    }
+
+    .card:hover {
+        width: 100%;
+    }
+
+    .card-info {
+        bottom: 100%;
+        padding: 0.75em;
+    }
+
+    .card:hover .card-info {
+        bottom: 300px;
+    }
+
+    .card-botton {
+        border: none;
+        background-color: #003764;
+        text-align: center;
+        font-size: 0.85em;
+        color: #fff;
+        margin-top: 0.2em;
+        border-radius: 5px;
+        padding: 0.5em;
+    }
+
+    .card-info p {
+        color: #3d4543;
+        font-size: 1.5em !important;
+    }
+
+    .card-info h3 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .card-info p {
+        font-size: 1em;
+    }
+
 }
