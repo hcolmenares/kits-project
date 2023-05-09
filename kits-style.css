@@ -278,7 +278,7 @@ a:active {
     color: #fff;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 412px) {
 
     .wrapper {
         justify-content: center;
