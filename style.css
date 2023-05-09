@@ -776,7 +776,7 @@ a:active {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 412px) {
 
     header,
     header.sticky {
