@@ -884,10 +884,9 @@ a:active {
         padding: 0 50px 50px;
     }
     
-    .team .teamBx .box .content {
-      padding: 15px 0;
-      width: 50%;
-    }
+    .team .teamBx {
+        width: 100%;
+      }
 
     .information {
         flex-direction: column;
