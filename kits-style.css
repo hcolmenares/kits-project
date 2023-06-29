@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto&display=swap');
 
+:root {
+    --blanco: #fff;
+    --blanco-carta: #e4e4e4;
+    --azul: #3475ca;
+    --negro: #111;
+    --azul-oscuro: #003764;
+    --azul-service: #07182E;
+    --naranja: #F88D2B;
+    --gris: #3d4543;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +20,12 @@
 }
 
 body {
-    background: #003764;
+    background: var(--azul-service);
     overflow-x: hidden;
 }
 
 section {
-    margin-top: 8em;
+    margin-top: 8rem;
 }
 
 .wrapper {
@@ -26,9 +37,9 @@ section {
 
 .servicios-bio {
     width: 100%;
-    margin-left: 2em;
-    color: #F88D2B;
-    font-size: 2em;
+    margin-left: 2rem;
+    color: var(--naranja);
+    font-size: 2rem;
 }
 
 .card-section {
@@ -38,9 +49,9 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 1em;
-    padding: 2em;
-    top: 5em;
+    margin: 1rem;
+    padding: 2rem;
+    top: 5rem;
 }
 
 .card-list {
@@ -51,20 +62,19 @@ section {
     flex-grow: 1;
     flex-basis: 0;
     width: 100%;
-    gap: 0.75em;
+    gap: 0.75rem;
 }
 
 .card {
     position: relative;
     overflow: hidden;
     display: flex;
-    justify-content: start;
-    background: #fff;
-    margin: 1em;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: var(--blanco);
+    margin: 1rem;
+    width: 18.75rem;
+    height: 12.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.313rem 0.938rem rgba(0, 0, 0, 0.3);
     transition: width 0.5s ease-in-out;
 }
 
@@ -72,71 +82,71 @@ section {
     width: 100%;
 }
 
+.card-info {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 100%;
+    width: calc(100% - 18.75rem);
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--blanco-carta);
+    transition: left 0.5s ease-in-out;
+}
+
+.card:hover .card-info {
+    display: flex;
+    flex-direction: column;
+    left: 18.75rem;
+}
+
+.card-info p {
+    margin: 0;
+    color: var(--gris);
+    font-size: 1.5rem;
+}
+
+.card-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .card .imgBx img {
     height: 100%;
-    width: 180px;
+    width: 11.25rem;
     object-fit: cover;
 }
 
 #muestra-liquida {
     scale: 1.2;
     height: 100%;
-    width: 280px;
+    width: 17.5rem;
     object-fit: cover;
-}
-
-.card-info {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 100%;
-    width: calc(100% - 300px);
-    height: 100%;
-    padding: 2em;
-    background-color: #e4e4e4;
-    transition: left 0.5s ease-in-out;
 }
 
 .card-botton {
     border: none;
-    background-color: #003764;
+    background-color: var(--azul-oscuro);
     text-align: center;
-    font-size: 0.85em;
-    color: #fff;
-    margin-top: 0.2em;
-    border-radius: 5px;
-    padding: 0.5em;
+    font-size: 0.85rem;
+    color: var(--blanco);
+    margin-top: 0.2rem;
+    border-radius: 0.313rem;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
-.card:hover .card-info {
-    left: 300px;
-}
-
-.card-info h3,
-.card-info p {
-    margin: 0;
-}
-
-.card-info p {
-    color: #3d4543;
-    font-size: 1.5em !important;
-}
-
-.card-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-.card-info p {
-    font-size: 1em;
+.card-botton:hover {
+    background-color: var(--azul-service);
+    scale: 1.03;
 }
 
 a:link,
 a:visited,
 a:active {
     text-decoration: none;
-    color: #fff;
+    color: var(--blanco);
 }
 
 @media (max-width: 412px) {
@@ -163,8 +173,10 @@ a:active {
     }
 
     .card {
+        display: flex;
         justify-content: center;
         margin: 0.75rem;
+        flex-direction: column;
     }
 
     .card:hover {
@@ -172,37 +184,44 @@ a:active {
     }
 
     .card-info {
-        bottom: 100%;
         padding: 0.75rem;
     }
 
     .card:hover .card-info {
-        bottom: 300px;
+        left: 0;
+        width: 100%;
+    }
+    
+    .card-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+    }
+
+    .card-info p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    
+    .card img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card:hover img {
+        width: 0;
     }
 
     .card-botton {
         border: none;
-        background-color: #003764;
+        background-color: var(--azul-oscuro);
         text-align: center;
         font-size: 0.85rem;
-        color: #fff;
+        color: var(--blanco);
         margin-top: 0.2rem;
-        border-radius: 5px;
-        padding: 0.5em;
-    }
-
-    .card-info p {
-        color: #3d4543;
-        font-size: 1.5rem !important;
-    }
-
-    .card-info h3 {
-        font-size: 1.5em;
-        margin-bottom: 0.5em;
-    }
-
-    .card-info p {
-        font-size: 1em;
+        border-radius: 0.313rem;
+        padding: 0.5rem;
     }
 
 }

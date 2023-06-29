@@ -8,8 +8,6 @@
     --azul-service: #07182E;
 }
 
-/* #07182E */
-
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +22,7 @@ body {
 }
 
 section {
-    margin-top: 2em;
+    margin-top: 2rem;
 }
 
 .wrapper {
