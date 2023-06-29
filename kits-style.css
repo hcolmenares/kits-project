@@ -149,7 +149,7 @@ a:active {
     color: var(--blanco);
 }
 
-@media (max-width: 412px) {
+@media (max-width: 500px) {
 
     .wrapper {
         justify-content: center;
