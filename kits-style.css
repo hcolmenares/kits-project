@@ -13,154 +13,15 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    margin-top: 8em;
+}
+
 .wrapper {
     position: relative;
     display: flex;
     left: 0;
     transition: 0.5s;
-}
-
-header {
-    background: #12222d;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 50px;
-    z-index: 10000;
-    transition: 0.5s;
-}
-
-header.sticky {
-    padding: 0;
-    background: #162c3b;
-}
-
-header .logo {
-    color: #fff !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    width: 100%;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-header .logoImg {
-    scale: 0.4;
-    height: 100%;
-    width: 150px;
-    object-fit: cover;
-}
-
-header .toggle {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: #fff;
-    padding: 1px 20px;
-}
-
-header .toggle::before {
-    content: 'Menu';
-    margin-right: 10px;
-}
-
-header .toggle.activate::before {
-    content: 'Close';
-}
-
-header .toggle span {
-    position: relative;
-    width: 20px;
-    height: 50px;
-}
-
-header .toggle span::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: 0.5s;
-}
-
-header .toggle span::after {
-    content: '';
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: 0.5s;
-}
-
-header .toggle.activate span::before {
-    transform: rotate(225deg);
-    top: 24px;
-}
-
-header .toggle.activate span::after {
-    transform: rotate(135deg);
-    top: 24px;
-}
-
-.sidebar {
-    position: fixed;
-    right: -400px;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    background: #12222d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    transition: 0.5s;
-}
-
-.sidebar.active {
-    right: 0px;
-}
-
-.sidebar ul {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar ul li {
-    list-style: none;
-    margin: 5px 0;
-}
-
-.sidebar ul li a {
-    color: #fff;
-    font-size: 30px;
-    font-weight: 400;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.sidebar ul li a:hover {
-    color: #3f8ffc;
-    font-size: 35px;
-}
-
-section {
-    margin-top: 8em;
 }
 
 .servicios-bio {
@@ -285,40 +146,15 @@ a:active {
         align-items: center;
     }
 
-    header,
-    header.sticky {
-        padding: 0px 10px;
-    }
-
-    header .logo {
-        font-size: 10px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        position: relative;
-        left: -20px;
-    }
-
-    header .logoImg {
-        position: relative;
-        width: 120px;
-        font-size: 10px;
-        left: -15px;
-    }
-
-    header .toggle {
-        padding: 0;
-        font-size: 13px;
-    }
-
     .card-section {
-        margin: 0.5em;
-        padding: 1em;
-        top: 5em;
+        margin: 0.5rem;
+        padding: 1rem;
+        top: 5rem;
     }
 
     .servicios-bio {
         margin-left: 0;
-        font-size: 1.75em;
+        font-size: 1.75rem;
         text-align: center;
     }
 
@@ -328,7 +164,7 @@ a:active {
 
     .card {
         justify-content: center;
-        margin: 0.75em;
+        margin: 0.75rem;
     }
 
     .card:hover {
@@ -337,7 +173,7 @@ a:active {
 
     .card-info {
         bottom: 100%;
-        padding: 0.75em;
+        padding: 0.75rem;
     }
 
     .card:hover .card-info {
@@ -348,16 +184,16 @@ a:active {
         border: none;
         background-color: #003764;
         text-align: center;
-        font-size: 0.85em;
+        font-size: 0.85rem;
         color: #fff;
-        margin-top: 0.2em;
+        margin-top: 0.2rem;
         border-radius: 5px;
         padding: 0.5em;
     }
 
     .card-info p {
         color: #3d4543;
-        font-size: 1.5em !important;
+        font-size: 1.5rem !important;
     }
 
     .card-info h3 {

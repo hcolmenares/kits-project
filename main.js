@@ -1,20 +1,6 @@
 let index = 0;
 const images = document.querySelectorAll('.banner img');
 
-function toggleClassName() {
-  let sidebar = document.querySelector('.sidebar');
-  let wrapper = document.querySelector('.wrapper');
-  let togglebtn = document.querySelector('.toggle');
-  sidebar.classList.toggle('active');
-  wrapper.classList.toggle('active');
-  togglebtn.classList.toggle('activate');
-}
-
-window.addEventListener('scroll', function () {
-  var header = document.querySelector('header');
-  header.classList.toggle("sticky", window.scrollY > 0)
-})
-
 function initCarousel() {
 
   setInterval(() => {
