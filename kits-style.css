@@ -104,12 +104,13 @@ section {
     margin: 0;
     color: var(--gris);
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .card-info h3 {
-    margin: 0;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
 }
 
 .card .imgBx img {
@@ -129,7 +130,7 @@ section {
     border: none;
     background-color: var(--azul-oscuro);
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--blanco);
     margin-top: 0.2rem;
     border-radius: 0.313rem;
@@ -149,7 +150,7 @@ a:active {
     color: var(--blanco);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
 
     .wrapper {
         justify-content: center;
@@ -158,18 +159,18 @@ a:active {
 
     .card-section {
         margin: 0.5rem;
-        padding: 1rem;
-        top: 5rem;
+        padding: 0.75rem;
+        top: 2rem;
     }
 
     .servicios-bio {
         margin-left: 0;
-        font-size: 1.75rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     .card-list {
-        gap: 0.35em;
+        gap: 0.3em;
     }
 
     .card {
@@ -179,29 +180,28 @@ a:active {
         flex-direction: column;
     }
 
-    .card:hover {
-        width: 100%;
-    }
-
     .card-info {
         padding: 0.75rem;
     }
 
     .card:hover .card-info {
-        left: 0;
         width: 100%;
+        padding: 0.3rem;
     }
     
     .card-info h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
+        width: 70%;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
         text-align: center;
     }
 
     .card-info p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        text-align: justify;
+        width: 70%;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
     
     .card img {
@@ -209,19 +209,160 @@ a:active {
         transition: 0.5s ease-in-out;
     }
 
+    .card:nth-child(1) img {
+        height: 110%;
+        width: 110%;
+    }
+
+    .card:hover img {
+        width: 40%;
+    }
+
+    .card-botton {
+        width: 60%;
+        text-align: center;
+        font-size: 1rem;
+        margin-left: 3rem;
+        padding: 0.5rem;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .card:hover .card-info {
+        width: 90%;
+        left: 15rem;
+        padding: 0.2rem;
+    }
+
+    .card:hover img {
+        width: 50%;
+    }
+
+    .card-info h3 {
+        margin-top: 0.3rem;
+    }
+
+    .card-info p {
+        margin-top: 0.3rem;
+    }
+
+    .card-botton {
+        font-size: 0.9rem;
+        margin-left: 1.75rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .servicios-bio {
+        margin-bottom: 0.6rem;
+    }
+
+    .card {
+        width: 22rem;
+        margin: 0.5rem;
+    }
+
+    .card-info {
+        padding: 0.75rem;
+    }
+
+    .card:hover .card-info {
+        width: 90%;
+        left: 14.5rem;
+        padding: 0.2rem;
+    }
+    
+    .card-info h3 {
+        margin-top: 0.7rem;
+    }
+
+    .card-info p {
+        font-size: 1rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .card img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card:nth-child(3) img {
+        margin-left: 2.75rem;
+    }
+
+    .card:hover img {
+        width: 40%;
+    }
+
+    .card-botton {
+        font-size: 0.9rem;
+        margin-left: 1.75rem;
+    }
+
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+
+    .card:hover .card-info {
+        width: 100%;
+        left: 0;
+        padding-top: 0.75rem;
+    }
+    
+    .card-info h3 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-info p {
+        width: 100%;
+    }
+
     .card:hover img {
         width: 0;
     }
 
     .card-botton {
-        border: none;
-        background-color: var(--azul-oscuro);
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 499px) and (min-width: 200px) {
+    
+    .card:hover img {
+        width: 0;
+    }
+
+    .card:hover .card-info {
+        width: 100%;
+        left: 0;
+    }
+
+    .card-info h3 {
+        width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
         text-align: center;
+    }
+
+    .card-info p {
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .card-botton {
+        width: 85%;
         font-size: 0.85rem;
-        color: var(--blanco);
-        margin-top: 0.2rem;
-        border-radius: 0.313rem;
-        padding: 0.5rem;
+        margin-top: 0.1rem;
+        padding-bottom: 0.2rem;
     }
 
 }
