@@ -775,36 +775,45 @@ a:active {
 @media (max-width: 412px) {
 
     .header {
-        height: 5rem;
+        padding-top: 0.5rem;
     }
 
     .header-container {
         gap: 0.05rem;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header.scrolled {
-        height: 5rem;
     }
 
     .navigation {
         display: flex;
         height: 100%;
         width: 70%;
+        transition: 0.3s ease-in-out;
     }
 
     .nav-list {
+        padding-bottom: 0.5rem;
         position: relative;
         top: -0.5rem;
     }
 
-    .logo-image {
-        padding: 0;
-        width: 50%;
+    .header.scrolled .nav-list {
+        display: none;
     }
+
+    .logo{
+        padding-bottom: 0.15rem;
+    }
+
+    .logo-image {
+        padding-bottom: 0.3rem;
+        padding: 0;
+        width: 45%;
+    }
+
+    .nav-item {
+        margin-right: 0.4rem;
+        margin-bottom: 0;
+      }
 
     .nav-item li {
         font-size: 0.8rem;
