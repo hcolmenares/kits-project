@@ -825,11 +825,10 @@ a:active {
 
     .about .contentBx {
         padding: 1.875rem;
-        width: 100%;
     }
 
     .about .imgBx {
-        min-height: 25rem;
+        min-height: 20rem;
         width: 100%;
     }
 
@@ -888,25 +887,30 @@ a:active {
         width: 100%;
     }
 
-    .footer {
-        padding: 1.25rem 3.125rem;
-        flex-direction: column;
+    .information {
+        position: relative;
+        display: flex;
         justify-content: center;
-        align-items: center;
+        margin: auto;
+        background: var(--blanco);
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.8rem;
     }
 
-    .footer p {
-        text-align: center;
+    .information .imgBx2 {
+        display: none;
     }
 
-    .footer ul {
-        margin-top: 1.25rem;
-        font-size: 0.75rem;
+    .form .inputBx {
+        margin-bottom: 0.8rem;
+        margin-left: -1rem;
     }
-
+    
     .footer .text {
         width: 95%;
         padding: 0.0625rem 0.3125rem;
-        font-size: 0.75em;
+        font-size: 0.85em;
     }
+
 }
