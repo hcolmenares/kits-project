@@ -191,6 +191,7 @@ section {
 
 .box:hover {
     border: 0.2rem solid var(--azul-oscuro);
+    scale: 1.1;
 }
 
 .box h2 {

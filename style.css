@@ -64,12 +64,6 @@ section {
     margin-left: 3rem;
     width: 25%;
     height: auto;
-    transition: 0.5s ease-in-out;
-}
-
-.logo-image:hover {
-    margin-left: 2.5rem;
-    width: 28%;
 }
 
 .navigation {
@@ -734,25 +728,31 @@ a:active {
     }
 }
 
-/* Estilos adicionales para hacer el header responsive */
 @media (max-width: 768px) {
     .header {
-        height: 4.5rem;
+        height: 5rem;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
     }
 
     .header.scrolled {
-        height: 2.4rem;
+        height: 3rem;
     }
 
     .logo-image {
-        margin-left: 0.6rem;
-        width: 0.8rem;
+        padding: 0.8rem;
+        width: 35%;
+        transition: 0.3s ease-in-out;
     }
 
-    .navigation {
-        margin-right: 2rem;
+    .logo-image:hover {
+        scale: 1.1;
     }
-
+    
     .nav-list {
         gap: 0.8rem;
     }
@@ -774,8 +774,35 @@ a:active {
 
 @media (max-width: 412px) {
 
-    .banner {
-        padding: 3.125rem;
+    .header {
+        height: 5rem;
+    }
+
+    .header-container {
+        gap: 0.05rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header.scrolled {
+        height: 3rem;
+    }
+
+    .navigation {
+        display: flex;
+        height: 100%;
+        width: 70%;
+      }
+
+    .logo-image {
+        padding: 0;
+        width: 50%;
+    }
+
+    .nav-item li {
+        font-size: 0.8rem;
     }
 
     .banner .content h2 {
