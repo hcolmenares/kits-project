@@ -8,6 +8,7 @@
     --azul-oscuro: #003764;
     --azul-service: #07182E;
     --naranja: #F88D2B;
+    --naranja-oscuro: #c7701f;
     --gris: #3d4543;
     --gris-oscuro: #333;
     --fondo-header: #f5f5f5;
@@ -25,7 +26,9 @@ body {
     background: var(--blanco);
 }
 
-
+section {
+    margin-bottom: 0.2rem;
+}
 
 /* --- Start of Header section --- */
 
@@ -141,130 +144,121 @@ body {
     }
 }
 
-
 /* --- End of Header section --- */
-
-
 .wrapper {
     position: relative;
     display: flex;
-    left: 0;
-    transition: 0.5s;
-}
-
-.servicios-bio {
-    width: 100%;
-    margin-left: 2rem;
-    color: var(--naranja);
-    font-size: 2rem;
-}
-
-.card-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 1rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    top: 5rem;
-}
-
-.card-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    flex-basis: 0;
-    width: 100%;
-    gap: 0.75rem;
-}
-
-.card {
-    position: relative;
+    height: 100%;
     overflow: hidden;
-    display: flex;
-    background: var(--blanco);
-    margin: 1rem;
-    width: 18.75rem;
-    height: 15rem;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.313rem 0.938rem rgba(0, 0, 0, 0.3);
-    transition: width 0.5s ease-in-out;
 }
 
-.card:hover {
+.heading {
+    margin-top: 3rem;
+    font-size: 2.3rem;
+}
+
+.team {
+    text-align: center;
+    padding: 3rem;
     width: 100%;
 }
 
-.card-info {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 100%;
-    width: calc(100% - 18.75rem);
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--blanco-carta);
-    transition: left 0.5s ease-in-out;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3.75rem;
 }
 
-.card:hover .card-info {
+.teamBx {
+    width: 30%;
+}
+
+.box {
+    position: relative;
+    background: var(--blanco);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
+    transition: 0.1s ease-in-out;
+}
+
+.box:hover {
+    border: 0.2rem solid var(--azul-oscuro);
+}
+
+.box h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+
+.imgBx {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.imgBx img {
+    background: var(--blanco);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 1rem 0.8rem;
     display: flex;
     flex-direction: column;
-    left: 18.75rem;
 }
 
-.card-info p {
-    margin: 0;
-    color: var(--gris);
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.card-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-    text-align: center;
-}
-
-.card .imgBx img {
-    height: 100%;
-    width: 11.25rem;
-    object-fit: cover;
-}
-
-#muestra-liquida {
-    scale: 1.2;
-    height: 100%;
-    width: 17.5rem;
-    object-fit: cover;
+.content span {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .card-botton {
     border: none;
     background-color: var(--azul-oscuro);
+    color: var(--blanco) !important;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--blanco);
     margin-top: 0.2rem;
     border-radius: 0.313rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     cursor: pointer;
+}
+
+.card-botton:nth-child(3) {
+    background: var(--naranja);
 }
 
 .card-botton:hover {
     background-color: var(--azul-service);
-    scale: 1.03;
+    cursor: pointer;
+}
+
+.card-botton:nth-child(3):hover {
+    background: var(--naranja-oscuro);
 }
 
 a:link,
 a:visited,
 a:active {
     text-decoration: none;
+    color: var(--gris-oscuro);
 }
 
 
@@ -341,7 +335,7 @@ a:active {
         width: 100%;
         padding: 0.3rem;
     }
-    
+
     .card-info h3 {
         width: 70%;
         font-size: 1.4rem;
@@ -356,7 +350,7 @@ a:active {
         margin-bottom: 0.5rem;
         text-align: center;
     }
-    
+
     .card img {
         width: 100%;
         transition: 0.5s ease-in-out;
@@ -428,7 +422,7 @@ a:active {
         left: 14.5rem;
         padding: 0.2rem;
     }
-    
+
     .card-info h3 {
         margin-top: 0.7rem;
     }
@@ -438,7 +432,7 @@ a:active {
         margin-top: 0.3rem;
         margin-bottom: 0.3rem;
     }
-    
+
     .card img {
         width: 100%;
         transition: 0.5s ease-in-out;
@@ -466,7 +460,7 @@ a:active {
         left: 0;
         padding-top: 0.75rem;
     }
-    
+
     .card-info h3 {
         width: 100%;
         margin-bottom: 0.5rem;
@@ -487,7 +481,7 @@ a:active {
 }
 
 @media (max-width: 499px) and (min-width: 200px) {
-    
+
     .card:hover img {
         width: 0;
     }
