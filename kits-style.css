@@ -70,11 +70,6 @@ section {
     transition: 0.5s ease-in-out;
 }
 
-.logo-image:hover {
-    margin-left: 2.5rem;
-    width: 28%;
-}
-
 .navigation {
     display: flex;
     align-items: center;
@@ -118,30 +113,6 @@ section {
 .nav-item:hover a {
     color: var(--blanco);
     font-size: 1.2rem;
-}
-
-/* Estilos adicionales para hacer el header responsive */
-@media (max-width: 768px) {
-    .header {
-        height: 3rem;
-    }
-
-    .header.scrolled {
-        height: 2.4rem;
-    }
-
-    .logo-image {
-        width: 1.5rem;
-    }
-
-    .nav-list {
-        flex-direction: row;
-    }
-
-    .nav-item {
-        margin-right: 1rem;
-        margin-bottom: 0;
-    }
 }
 
 /* --- End of Header section --- */
@@ -191,7 +162,6 @@ section {
 
 .box:hover {
     border: 0.2rem solid var(--azul-oscuro);
-    scale: 1.1;
 }
 
 .box h2 {
@@ -262,13 +232,10 @@ a:active {
     color: var(--gris-oscuro);
 }
 
-
 .footer {
-    bottom: 0;
-    margin-top: 3rem;
     position: relative;
     background: var(--azul-oscuro);
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 6.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,9 +341,68 @@ a:active {
         padding: 0.5rem;
     }
 
+    .footer {
+        padding: 1.25rem 3.125rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+
+    .footer ul {
+        margin-top: 1.25rem;
+        font-size: 0.75rem;
+    }
+
 }
 
 @media (max-width: 900px) {
+
+    .header {
+        height: 5rem;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .header.scrolled {
+        height: 3rem;
+    }
+
+    .logo-image {
+        padding: 0.8rem;
+        width: 35%;
+        transition: 0.3s ease-in-out;
+    }
+
+    .logo-image:hover {
+        scale: 1.1;
+    }
+
+    .nav-list {
+        gap: 0.8rem;
+    }
+
+    .nav-item {
+        margin-right: 0.7rem;
+        margin-bottom: 0;
+    }
+
+    .nav-item li {
+        font-size: 1rem;
+    }
+
+    .box h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
 
     .card:hover .card-info {
         width: 90%;
@@ -396,14 +422,33 @@ a:active {
         margin-top: 0.3rem;
     }
 
+    .content span {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
     .card-botton {
         font-size: 0.9rem;
-        margin-left: 1.75rem;
+        margin-left: 0.75rem;
+        width: 90%;
     }
 
 }
 
 @media (max-width: 700px) {
+
+    
+    .logo-image {
+        padding-bottom: 0.3rem;
+        width: 50%;
+    }
+
+    .nav-list {
+        padding-bottom: 0.5rem;
+        position: relative;
+        top: 0.5rem;
+        margin-right: 1.5rem;
+    }
 
     .servicios-bio {
         margin-bottom: 0.6rem;
@@ -447,14 +492,40 @@ a:active {
         width: 40%;
     }
 
+    .teamBx {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
     .card-botton {
         font-size: 0.9rem;
-        margin-left: 1.75rem;
+        margin-left: 0.75rem;
+        width: 90%;
     }
 
 }
 
 @media (max-width: 600px) and (min-width: 500px) {
+
+    .navigation {
+        display: flex;
+        height: 100%;
+        width: 70%;
+        transition: 0.3s ease-in-out;
+        margin-right: 0;
+    }
+
+    .nav-list {
+        margin-right: 0;
+    }
+
+    .logo-image {
+        width: 70%;
+    }
+
+    .header.scrolled .nav-list {
+        display: none;
+    }
 
     .card:hover .card-info {
         width: 100%;
@@ -483,6 +554,56 @@ a:active {
 
 @media (max-width: 499px) and (min-width: 200px) {
 
+    .header {
+        padding-top: 0.5rem;
+    }
+
+    .header-container {
+        gap: 0.05rem;
+        flex-direction: column;
+    }
+
+    .navigation {
+        display: flex;
+        height: 100%;
+        width: 70%;
+        transition: 0.3s ease-in-out;
+        margin-right: 0;
+    }
+
+    .nav-list {
+        padding-bottom: 0.5rem;
+        position: relative;
+        top: -0.5rem;
+    }
+
+    .header.scrolled .nav-list {
+        display: none;
+    }
+
+    .logo {
+        padding-bottom: 0.15rem;
+        text-align: center;
+    }
+
+    .logo-image {
+        padding-bottom: 0.3rem;
+        padding: 0;
+        width: 45%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .nav-item {
+        margin-right: 0.4rem;
+        margin-bottom: 0;
+    }
+
+    .nav-item li {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
     .card:hover img {
         width: 0;
     }
@@ -506,11 +627,23 @@ a:active {
         text-align: center;
     }
 
+
+    .teamBx {
+        width: 100%;
+    }
+
+
     .card-botton {
         width: 85%;
         font-size: 0.85rem;
         margin-top: 0.1rem;
         padding-bottom: 0.2rem;
+    }
+
+    .footer .text {
+        width: 95%;
+        padding: 0.0625rem 0.3125rem;
+        font-size: 0.85em;
     }
 
 }
