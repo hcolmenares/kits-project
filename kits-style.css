@@ -5,7 +5,7 @@
     --blanco-carta: #e4e4e4;
     --azul: #3475ca;
     --negro: #111;
-    --azul-oscuro: #003764;
+    --azul-oscuro: #162c3b;
     --azul-service: #07182E;
     --naranja: #F88D2B;
     --naranja-oscuro: #c7701f;
@@ -33,7 +33,7 @@ section {
 /* --- Start of Header section --- */
 
 .header {
-    height: 5rem;
+    height: 5.5rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -41,7 +41,7 @@ section {
     transition: height 0.3s ease;
     overflow: hidden;
     transition: 0.5s ease-in-out;
-    background: var(--fondo-header);
+    background: var(--azul-oscuro);
 }
 
 .header-container {
@@ -55,7 +55,7 @@ section {
 }
 
 .header.scrolled {
-    height: 4.4rem;
+    height: 5rem;
 }
 
 .logo {
@@ -64,8 +64,8 @@ section {
 
 .logo-image {
     padding: 0.8rem;
-    margin-left: 3rem;
-    width: 25%;
+    margin-left: 4rem;
+    width: 20%;
     height: auto;
     transition: 0.5s ease-in-out;
 }
@@ -90,7 +90,7 @@ section {
 }
 
 .nav-item {
-    color: var(--gris-oscuro);
+    color: var(--blanco) !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +99,8 @@ section {
 }
 
 .nav-item:hover {
-    background: var(--azul);
-    color: var(--blanco);
+    background: var(--blanco);
+    color: var(--azul-oscuro) !important;
     cursor: pointer;
 }
 
