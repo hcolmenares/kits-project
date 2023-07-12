@@ -555,12 +555,22 @@ a:active {
 @media (max-width: 499px) and (min-width: 200px) {
 
     .header {
+        height: 6.5rem;
         padding-top: 0.5rem;
     }
 
     .header-container {
+        margin-top: 0.5rem;
         gap: 0.05rem;
         flex-direction: column;
+    }
+
+    .header.scrolled .header-container {
+        margin-top: 0;
+    }
+
+    .header.scrolled {
+        height: 5rem;
     }
 
     .navigation {
@@ -589,7 +599,7 @@ a:active {
     .logo-image {
         padding-bottom: 0.3rem;
         padding: 0;
-        width: 45%;
+        width: 40%;
         margin-right: 0;
         margin-left: 0;
     }

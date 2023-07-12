@@ -777,12 +777,22 @@ a:active {
 @media (max-width: 412px) {
 
     .header {
+        height: 6.5rem;
         padding-top: 0.5rem;
     }
 
     .header-container {
+        margin-top: 0.5rem;
         gap: 0.05rem;
         flex-direction: column;
+    }
+
+    .header.scrolled .header-container {
+        margin-top: 0;
+    }
+
+    .header.scrolled {
+        height: 5rem;
     }
 
     .navigation {
@@ -790,6 +800,7 @@ a:active {
         height: 100%;
         width: 70%;
         transition: 0.3s ease-in-out;
+        margin-right: 0;
     }
 
     .nav-list {
