@@ -17,8 +17,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
-    /* 1 REM = 10px */
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
@@ -28,19 +26,14 @@ body {
     background: var(--blanco);
 }
 
-/* --- Start of Enlatado section --- */
-
-.enlatado {
-    display: flex;
-    flex-direction: column;
+section {
+    margin-bottom: 0.2rem;
 }
-
-/* --- End of Enlatado section --- */
 
 /* --- Start of Header section --- */
 
 .header {
-    height: 10rem;
+    height: 5.5rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -66,7 +59,7 @@ body {
 }
 
 .logo {
-    width: 40%;
+    width: 50%;
 }
 
 .logo-image {
@@ -103,7 +96,6 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    font-size: 2.5rem;
 }
 
 .nav-item:hover {
@@ -124,12 +116,7 @@ body {
 }
 
 /* --- End of Header section --- */
-
-/* --- Start of Container section --- */
-
 .wrapper {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -139,28 +126,27 @@ body {
     overflow: hidden;
 }
 
-.team {
-    text-align: center;
-    padding: 3rem 6rem;
-    width: 100%;
+.heading {
+    margin-top: 3rem;
+    font-size: 2.3rem;
 }
 
-.heading {
-    margin-top: 5rem;
-    font-size: 3.5rem;
+.team {
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
 }
 
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 2rem;
-    padding: 0rem 6rem;
+    margin-top: 3.75rem;
 }
 
 .teamBx {
-    width: 40%;
+    width: 30%;
 }
 
 .box {
@@ -168,7 +154,7 @@ body {
     background: var(--blanco);
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 0.625rem;
     overflow: hidden;
     box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1);
     transition: 0.1s ease-in-out;
@@ -179,17 +165,10 @@ body {
 }
 
 .box h2 {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.2;
-    margin: 1rem;
-}
-
-.box h2 span {
-    font-size: 2rem;
-    font-weight: 400;
+    margin-top: 1rem;
 }
 
 .imgBx {
@@ -197,15 +176,11 @@ body {
     width: 100%;
     padding-top: 100%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
 }
 
 .imgBx img {
-    padding: 2rem;
     background: var(--blanco);
     position: absolute;
-    margin: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -217,7 +192,11 @@ body {
     padding: 1rem 0.8rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.content span {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .card-botton {
@@ -225,14 +204,16 @@ body {
     background-color: var(--azul-oscuro);
     color: var(--blanco) !important;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: var(--blanco);
     margin-top: 0.2rem;
-    margin-bottom: 1rem;
     border-radius: 0.313rem;
     padding: 0.3rem;
     cursor: pointer;
-    width: 100%;
+}
+
+.card-botton:nth-child(3) {
+    background: var(--naranja);
 }
 
 .card-botton:hover {
@@ -240,32 +221,28 @@ body {
     cursor: pointer;
 }
 
+.card-botton:nth-child(3):hover {
+    background: var(--naranja-oscuro);
+}
+
 a:link,
 a:visited,
 a:active {
     text-decoration: none;
+    color: var(--gris-oscuro);
 }
 
-/* --- End of Container section --- */
-
-/* --- Start of Footer Section --- */
-
 .footer {
-    position: fixed;
-    width: 100%;
+    position: relative;
     background: var(--azul-oscuro);
     padding: 1.25rem 6.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    margin: 0;
-    bottom: 0;
 }
 
 .footer .text {
     color: var(--blanco);
-    font-size: 1.2rem;
 }
 
 .footer ul {
@@ -288,10 +265,6 @@ a:active {
     filter: invert(1);
 }
 
-/* --- End of Footer Section --- */
-
-/* --- Start of Media Querys --- */
-
 @media (max-width: 1050px) {
 
     .wrapper {
@@ -310,16 +283,6 @@ a:active {
         font-size: 2rem;
         text-align: center;
     }
-    
-    .team {
-        padding: 15rem 3rem;
-    }
-
-    .box h2 {
-        font-size: 1.5rem;
-        line-height: 1;
-        margin: 0.8rem;
-    }
 
     .card-list {
         gap: 0.3em;
@@ -332,23 +295,65 @@ a:active {
         flex-direction: column;
     }
 
+    .card-info {
+        padding: 0.75rem;
+    }
+
+    .card:hover .card-info {
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    .card-info h3 {
+        width: 70%;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .card-info p {
+        width: 70%;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card:nth-child(1) img {
+        height: 110%;
+        width: 110%;
+    }
+
+    .card:hover img {
+        width: 40%;
+    }
+
     .card-botton {
-        width: 90%;
+        width: 60%;
+        text-align: center;
         font-size: 1rem;
+        margin-left: 3rem;
         padding: 0.5rem;
     }
 
     .footer {
-        padding: 0.2rem 2rem;
+        padding: 1.25rem 3.125rem;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .footer .text {
-        font-size: 1.2rem;
+    .footer p {
+        text-align: center;
     }
 
     .footer ul {
-        margin-top: 0.2rem;
+        margin-top: 1.25rem;
         font-size: 0.75rem;
     }
 
@@ -357,23 +362,22 @@ a:active {
 @media (max-width: 900px) {
 
     .header {
-        height: 8rem;
+        height: 5rem;
     }
 
     .header-container {
         display: flex;
         justify-content: center;
-        padding: 0.8rem;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .header.scrolled {
-        height: 5rem;
+        height: 3rem;
     }
 
     .logo-image {
         padding: 0.8rem;
-        width: 30%;
+        width: 35%;
         transition: 0.3s ease-in-out;
     }
 
@@ -382,7 +386,7 @@ a:active {
     }
 
     .nav-list {
-        gap: 0.6rem;
+        gap: 0.8rem;
     }
 
     .nav-item {
@@ -391,37 +395,36 @@ a:active {
     }
 
     .nav-item li {
-        font-size: 1.4rem;
-    }
-
-    .heading {
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-    }
-
-    .container {
-        padding: 5rem 0rem;
-    }
-
-    .teamBx {
-        width: 45%;
+        font-size: 1rem;
     }
 
     .box h2 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
         margin-top: 1rem;
     }
 
-    .box h2 span {
-        font-size: 1.5rem;
+    .card:hover .card-info {
+        width: 90%;
+        left: 15rem;
+        padding: 0.2rem;
     }
 
-    .content {
-        padding: 0.4rem 0.6rem;
+    .card:hover img {
+        width: 50%;
+    }
+
+    .card-info h3 {
+        margin-top: 0.3rem;
+    }
+
+    .card-info p {
+        margin-top: 0.3rem;
     }
 
     .content span {
         font-size: 0.9rem;
+        font-weight: 400;
     }
 
     .card-botton {
@@ -434,66 +437,125 @@ a:active {
 
 @media (max-width: 700px) {
 
-    .header {
-        height: 8rem;
-    }
-
-    .header-container {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     .logo-image {
-        width: 60%;
-        margin-left: 2.3rem;
-    }
-
-    .navigation {
-        width: 60%;
-        margin-right: 2rem;
+        padding-bottom: 0.3rem;
+        width: 50%;
     }
 
     .nav-list {
         padding-bottom: 0.5rem;
         position: relative;
         top: 0.5rem;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
     }
 
-    .nav-item li {
+    .servicios-bio {
+        margin-bottom: 0.6rem;
+    }
+
+    .card {
+        width: 22rem;
+        margin: 0.5rem;
+    }
+
+    .card-info {
+        padding: 0.75rem;
+    }
+
+    .card:hover .card-info {
+        width: 90%;
+        left: 14.5rem;
+        padding: 0.2rem;
+    }
+
+    .card-info h3 {
+        margin-top: 0.7rem;
+    }
+
+    .card-info p {
         font-size: 1rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
     }
 
-    .wrapper {
-        margin-top: 0rem;
+    .card img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
     }
 
-    .team {
-        padding: 10rem 3rem;
+    .card:nth-child(3) img {
+        margin-left: 2.75rem;
     }
 
-    .heading {
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .container {
-        padding: 0.5rem 0rem;
+    .card:hover img {
+        width: 40%;
     }
 
     .teamBx {
-        width: 100%;
-        margin-bottom: 2rem;
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .card-botton {
+        font-size: 0.9rem;
+        margin-left: 0.75rem;
+        width: 90%;
     }
 
 }
 
-/* @media (min-width: 500px) and (max-width: 600px) */
+@media (max-width: 600px) and (min-width: 500px) {
 
-@media (max-width: 400px) {
+    .navigation {
+        display: flex;
+        height: 100%;
+        width: 70%;
+        transition: 0.3s ease-in-out;
+        margin-right: 0;
+    }
+
+    .nav-list {
+        margin-right: 0;
+    }
+
+    .logo-image {
+        width: 70%;
+    }
+
+    .header.scrolled .nav-list {
+        display: none;
+    }
+
+    .card:hover .card-info {
+        width: 100%;
+        left: 0;
+        padding-top: 0.75rem;
+    }
+
+    .card-info h3 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-info p {
+        width: 100%;
+    }
+
+    .card:hover img {
+        width: 0;
+    }
+
+    .card-botton {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 499px) and (min-width: 200px) {
 
     .header {
-        height: 8rem;
+        height: 6.5rem;
         padding-top: 0.5rem;
     }
 
@@ -509,23 +571,6 @@ a:active {
 
     .header.scrolled {
         height: 5rem;
-    }
-
-    .logo {
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-
-    .header.scrolled .logo {
-        margin-top: 1rem;
-    }
-
-    .logo-image {
-        padding-bottom: 0.3rem;
-        padding: 0;
-        width: 40%;
-        margin-right: 0;
-        margin-left: 0;
     }
 
     .navigation {
@@ -546,68 +591,69 @@ a:active {
         display: none;
     }
 
-    .nav-item {
-        margin: 0 auto;
-    }
-
-    .nav-item li {
-        font-size: 1rem;
-        font-weight: 700;
-    }
-
-    .team {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .heading {
-        margin-top: 0.1rem;
-        margin-bottom: 0.5rem;
-        font-size: 3rem;
-    }
-
-    .container {
-        margin-top: 1rem;
-        padding: 0rem 0rem;
-    }
-
-    .teamBx {
-        width: 90%;
-        margin: 0.7rem auto;
-    }
-
-    .box h2 {
-        font-size: 2rem;
-    }
-
-    .content span {
-        padding: 0.2rem;
-        font-size: 1.5rem;
-    }
-
-    .card-botton {
-        width: 100%;
-        font-size: 1.5rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.2rem;
-    }
-
-    .footer {
-        width: 100%;
-    }
-
-    .footer .text {
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 1.2rem;
-    }
-
-    .footer p {
+    .logo {
+        padding-bottom: 0.15rem;
         text-align: center;
     }
 
-}
+    .logo-image {
+        padding-bottom: 0.3rem;
+        padding: 0;
+        width: 40%;
+        margin-right: 0;
+        margin-left: 0;
+    }
 
-/* --- End of Media Querys --- */
+    .nav-item {
+        margin-right: 0.4rem;
+        margin-bottom: 0;
+    }
+
+    .nav-item li {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    .card:hover img {
+        width: 0;
+    }
+
+    .card:hover .card-info {
+        width: 100%;
+        left: 0;
+    }
+
+    .card-info h3 {
+        width: 100%;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .card-info p {
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+
+    .teamBx {
+        width: 100%;
+    }
+
+
+    .card-botton {
+        width: 85%;
+        font-size: 0.85rem;
+        margin-top: 0.1rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .footer .text {
+        width: 95%;
+        padding: 0.0625rem 0.3125rem;
+        font-size: 0.85em;
+    }
+
+}
