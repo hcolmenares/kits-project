@@ -95,3 +95,13 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
+
+const miVideo = document.getElementById('miVideo');
+
+function reproducirVideo() {
+  miVideo.play();
+}
+
+function pausarVideo() {
+  miVideo.pause();
+}
