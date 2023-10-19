@@ -40,12 +40,6 @@ body {
   color: var(--azul);
 }
 
-@media (max-width: 390px) {
-  .mt-5 {
-    margin-top: 5rem;
-  }
-}
-
 /* --- Globales End --- */
 
 /* --- Start of Enlatado section --- */
@@ -171,13 +165,6 @@ body {
   width: 70%;
 }
 
-@media (max-width: 390px) {
-  .team-viales {
-    padding: 1.5rem 3rem;
-    width: 100%;
-  }
-}
-
 .heading {
   margin-top: 5rem;
   font-size: 3.5rem;
@@ -213,16 +200,6 @@ body {
 
 .teamBx {
   width: 30%;
-}
-
-@media (max-width: 390px) {
-  .teamBx-viales {
-    width: 90%;
-  }
-
-  .contacto-texto {
-    font-size: 1.8rem;
-  }
 }
 
 .box,
@@ -312,15 +289,6 @@ body {
   padding: 0.3rem;
   cursor: pointer;
   width: 100%;
-}
-
-@media (max-width: 390px) {
-  .card-botton {
-    min-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 .card-botton:nth-child(2n + 1) {
@@ -627,7 +595,17 @@ a:active {
 
 /* @media (min-width: 500px) and (max-width: 600px) */
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+
+  .mt-5 {
+    margin-top: 5rem;
+  }
+
+  .team-viales {
+    padding: 1.5rem 3rem;
+    width: 100%;
+  }
+
   .header {
     height: 8rem;
     padding-top: 0.5rem;
@@ -754,6 +732,21 @@ a:active {
 
   .div-volver {
     width: 90%;
+  }
+
+  .teamBx-viales {
+    width: 90%;
+  }
+
+  .contacto-texto {
+    font-size: 1.8rem;
+  }
+
+  .card-botton {
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
